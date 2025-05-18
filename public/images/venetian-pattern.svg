@@ -1,0 +1,17 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M60 0C26.9 0 0 26.9 0 60C0 93.1 26.9 120 60 120C93.1 120 120 93.1 120 60C120 26.9 93.1 0 60 0ZM60 110C32.4 110 10 87.6 10 60C10 32.4 32.4 10 60 10C87.6 10 110 32.4 110 60C110 87.6 87.6 110 60 110Z" fill="#b06939" fill-opacity="0.1"/>
+<path d="M60 20C38.4 20 20 38.4 20 60C20 81.6 38.4 100 60 100C81.6 100 100 81.6 100 60C100 38.4 81.6 20 60 20ZM60 90C43.9 90 30 76.1 30 60C30 43.9 43.9 30 60 30C76.1 30 90 43.9 90 60C90 76.1 76.1 90 60 90Z" fill="#9e3432" fill-opacity="0.1"/>
+<path d="M60 40C49.5 40 40 49.5 40 60C40 70.5 49.5 80 60 80C70.5 80 80 70.5 80 60C80 49.5 70.5 40 60 40ZM60 70C55.1 70 50 64.9 50 60C50 55.1 55.1 50 60 50C64.9 50 70 55.1 70 60C70 64.9 64.9 70 60 70Z" fill="#decebe" fill-opacity="0.2"/>
+<path d="M0 0H10V10H0V0Z" fill="#b06939" fill-opacity="0.05"/>
+<path d="M20 0H30V10H20V0Z" fill="#b06939" fill-opacity="0.05"/>
+<path d="M40 0H50V10H40V0Z" fill="#b06939" fill-opacity="0.05"/>
+<path d="M60 0H70V10H60V0Z" fill="#b06939" fill-opacity="0.05"/>
+<path d="M80 0H90V10H80V0Z" fill="#b06939" fill-opacity="0.05"/>
+<path d="M100 0H110V10H100V0Z" fill="#b06939" fill-opacity="0.05"/>
+<path d="M10 10H20V20H10V10Z" fill="#9e3432" fill-opacity="0.05"/>
+<path d="M30 10H40V20H30V10Z" fill="#9e3432" fill-opacity="0.05"/>
+<path d="M50 10H60V20H50V10Z" fill="#9e3432" fill-opacity="0.05"/>
+<path d="M70 10H80V20H70V10Z" fill="#9e3432" fill-opacity="0.05"/>
+<path d="M90 10H100V20H90V10Z" fill="#9e3432" fill-opacity="0.05"/>
+<path d="M110 10H120V20H110V10Z" fill="#9e3432" fill-opacity="0.05"/>
+</svg>

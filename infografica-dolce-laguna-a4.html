@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida per gli Ospiti - Dolce Laguna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #b06939;
+            --secondary: #942e2f;
+            --tertiary: #decebe;
+            --accent: #9e3432;
+            --light-blue: #9ccce4;
+            --orange-gold: rgba(232, 151, 0, 1);
+            --background: #ffffff;
+            --text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.5;
+            width: 210mm; /* A4 width */
+            height: 297mm; /* A4 height */
+            margin: 0 auto;
+            padding: 15mm 10mm; /* Margins for printing */
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--tertiary);
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--secondary);
+            font-size: 24px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .address-bar {
+            background-color: var(--tertiary);
+            color: var(--secondary);
+            text-align: center;
+            padding: 8px;
+            margin: 15px 0;
+            font-weight: 500;
+            border-radius: 4px;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary);
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border-bottom: 1px solid var(--tertiary);
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        h3 svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: var(--text);
+        }
+
+        .info-list {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .info-list li {
+            margin-bottom: 4px;
+            padding-left: 12px;
+            position: relative;
+            font-size: 12px;
+        }
+
+        .info-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .two-columns {
+            column-count: 2;
+            column-gap: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid var(--tertiary);
+            font-size: 11px;
+            color: var(--text);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+        }
+
+        .contact-item svg {
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
+            color: var(--primary);
+        }
+
+        @media print {
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 10mm;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/images/logo-dolcelaguna.png" alt="Dolce Laguna Logo" class="logo">
+            <div class="header-text">
+                <h1>Benvenuti a Dolce Laguna</h1>
+                <p class="subtitle">La vostra guida completa per un soggiorno indimenticabile</p>
+            </div>
+        </header>
+
+        <div class="address-bar">
+            Via Alessandria 41/b - 30173 - Venezia | DOLCE LAGUNA di FF Hospitality s.r.l.
+        </div>
+
+        <div class="main-grid">
+            <!-- Colonna sinistra -->
+            <div>
+                <section class="section">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        Check-in e Check-out
+                    </h2>
+                    <h3>Orari Standard</h3>
+                    <ul class="info-list">
+                        <li><strong>Check-in:</strong> dalle 15:00</li>
+                        <li><strong>Check-out:</strong> entro le 10:00</li>
+                        <li><strong>Reception aperta:</strong> fino alle 19:00</li>
+                    </ul>
+                    
+                    <h3>Self Check-in</h3>
+                    <p>Dopo le 19:00 è possibile il self check-in, inviando in anticipo i documenti (es. passaporto). Riceverai un codice di accesso e le istruzioni per entrare autonomamente.</p>
+                    <p>È consentito il check-in notturno fino all'01:00.</p>
+                    
+                    <h3>Check-out Anticipato</h3>
+                    <p>Per check-out anticipato (es. ore 05:00): lascia la chiave nella stanza o nel box predisposto.</p>
+                    
+                    <h3>Deposito Bagagli</h3>
+                    <p>Deposito bagagli disponibile vicino alla reception, in area videosorvegliata, prima delle 14:00. Utile per check-in anticipati o check-out tardivi.</p>
+                </section>
+
+                <section class="section">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Colazione e Ristorazione
+                    </h2>
+                    <p>Colazione non inclusa, ma disponibile un angolo rinfresco dalle 08:00 alle 10:00 con:</p>
+                    <ul class="info-list">
+                        <li>Torte confezionate</li>
+                        <li>Caffè</li>
+                        <li>Tisane</li>
+                    </ul>
+                    <p>Cucina non disponibile</p>
+                </section>
+
+                <section class="section">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        Parcheggio e Trasporti
+                    </h2>
+                    <h3>Parcheggio</h3>
+                    <ul class="info-list">
+                        <li>Parcheggio interno gratuito</li>
+                        <li>Scoperto, all'interno della proprietà</li>
+                        <li>Disponibile solo durante il soggiorno</li>
+                    </ul>
+                    
+                    <h3>Collegamenti Aeroportuali</h3>
+                    <p><span class="highlight">Aeroporto Venezia Marco Polo a 900 metri</span>: raggiungibile a piedi o in taxi</p>
+                    <ul class="info-list">
+                        <li>Taxi prenotabili in anticipo (tariffa fissa: €20)</li>
+                        <li>Possibilità di prenotazione anche per partenze all'alba</li>
+                    </ul>
+                    
+                    <h3>Trasporto Pubblico</h3>
+                    <p><strong>Autobus:</strong> Tessera – 350 m, Tessera Centro – 400 m</p>
+                    <p><strong>Treno:</strong> Gaggio Porta Est – 8 km, Gaggio – 9 km</p>
+                </section>
+            </div>
+
+            <!-- Colonna destra -->
+            <div>
+                <section class="section">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Servizi in Struttura e Dotazioni Camere
+                    </h2>
+                    <div class="two-columns">
+                        <div>
+                            <h3>Bagno</h3>
+                            <ul class="info-list">
+                                <li>Bagno privato con doccia</li>
+                                <li>Asciugacapelli</li>
+                                <li>Shampoo</li>
+                                <li>Acqua calda</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3>Camera da Letto</h3>
+                            <ul class="info-list">
+                                <li>Lenzuola e asciugamani forniti</li>
+                                <li>Carta igienica, sapone, essenziali</li>
+                                <li>Grucce appendiabiti</li>
+                                <li>Culla disponibile per famiglie</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="two-columns">
+                        <div>
+                            <h3>Lavanderia</h3>
+                            <ul class="info-list">
+                                <li>Lavatrice non disponibile</li>
+                                <li>Ferro da stiro non disponibile</li>
+                                <li>Servizio lavanderia self-service a 20 minuti in autobus</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3>Intrattenimento</h3>
+                            <ul class="info-list">
+                                <li>TV</li>
+                                <li>Sala comune con divani</li>
+                                <li>Giardino e terrazza arredati</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="two-columns">
+                        <div>
+                            <h3>Comfort</h3>
+                            <ul class="info-list">
+                                <li>Aria condizionata</li>
+                                <li>Riscaldamento</li>
+                                <li>Ascensore</li>
+                                <li>Area fumatori designata</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3>Sicurezza</h3>
+                            <ul class="info-list">
+                                <li>Estintore</li>
+                                <li>Kit di pronto soccorso</li>
+                                <li>Non presenti: allarme antincendio e rilevatore di monossido</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="two-columns">
+                        <div>
+                            <h3>Internet</h3>
+                            <ul class="info-list">
+                                <li>Wi-Fi gratuito in tutta la struttura</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3>Accesso</h3>
+                            <ul class="info-list">
+                                <li>Ingresso indipendente e privato</li>
+                                <li>Self check-in con cassetta delle chiavi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Punti di Interesse nelle Vicinanze
+                    </h2>
+                    <div class="two-columns">
+                        <div>
+                            <h3>Attrazioni</h3>
+                            <ul class="info-list">
+                                <li>Ca' d'Oro – 10 km</li>
+                                <li>Ponte della Costituzione – 10 km</li>
+                                <li>Ponte di Rialto – 10 km</li>
+                                <li>Giardino Papadopoli – 10 km</li>
+                                <li>Scuola Grande di San Rocco – 10 km</li>
+                                <li>Procuratie Vecchie – 10 km</li>
+                                <li>Piazza San Marco – 10 km</li>
+                                <li>Palazzo Ducale – 10 km</li>
+                                <li>Sestiere di San Polo – 11 km</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3>Ristoranti nei dintorni</h3>
+                            <ul class="info-list">
+                                <li>M & M Pizzeria Kebab – 350 m</li>
+                                <li>Eden Parking Ristorante – 350 m</li>
+                                <li>Pizzeria Shock – 500 m</li>
+                            </ul>
+                            
+                            <h3>Aeroporti</h3>
+                            <ul class="info-list">
+                                <li>Aeroporto di Venezia Marco Polo – 900 m</li>
+                                <li>Aeroporto di Treviso – Antonio Canova – 25 km</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>+39 334 181 7894</span>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>info@dolcelaguna.it</span>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>P.IVA: 02912450801 | REA: TP - 205823</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

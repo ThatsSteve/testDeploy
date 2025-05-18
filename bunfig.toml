@@ -1,0 +1,3 @@
+# Configurazione corretta per Bun
+[install]
+# Assicuriamoci che non ci siano riferimenti errati a tailwind-css
